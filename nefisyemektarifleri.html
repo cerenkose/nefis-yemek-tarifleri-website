@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font: inherit;
+    }
+
+    .simple-bar {
+      background-color: #F2F5FA;
+      ;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .bar-main {
+      margin: 0 auto;
+      width: 1000px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main-sol {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .main-sag {
+      justify-content: flex-end;
+      align-items: center;
+      display: flex;
+    }
+
+    a {
+      text-decoration: none;
+      color: grey;
+    }
+
+    .simple-bar img {
+      margin-left: 5px;
+    }
+
+    .simple-bar2 {
+      margin: 0 auto;
+      width: 1000px;
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      height: 80px;
+    }
+
+    span {
+      font-size: 12px;
+      margin-left: 10px;
+
+    }
+
+    .logo {
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
+
+    .logo img {
+      padding: 0;
+      margin: 0;
+      align-items: center;
+    }
+
+    label {
+      margin-left: 60px;
+      display: flex;
+      align-items: center;
+
+    }
+
+    label input {
+      width: 350px;
+      height: 40px;
+
+      border-radius: 10px;
+      border-color: rgb(192, 188, 188);
+    }
+
+    input::placeholder {
+      padding-left: 10px;
+      color: grey;
+      font-size: 16px;
+    }
+
+    .arama .simge {
+      height: 45px;
+      width: 60px;
+      background-color: #cc2e38;
+      border-radius: 0 5px 5px 0;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    button {
+      width: 160px;
+      height: 50px;
+      background-color: #f89526;
+      border-color: #f89526;
+      border-radius: 5px;
+      align-items: center;
+      display: flex;
+      color: white;
+      padding-left: 10px;
+      margin-left: 16px;
+
+    }
+
+    button span {
+      font-size: 12px;
+    }
+
+    .sag {
+      border: 1px solid grey;
+      display: flex;
+    }
+
+    .navbar{
+      height: 80px;
+      background-color: #cc2e38;
+      
+    }
+    .navbar-ic{
+      margin: 0 auto;
+      width: 1000px;
+    }
+ 
+    .navbar{
+      border-bottom: 6px solid #f89526;
+    } 
+    .bir{
+     height: auto;
+     width: 110px;
+     font-size: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="simple-bar">
+    <div class="bar-main">
+      <div class="main-sol">
+        <img src="house-solid.svg" alt="" width="20px" height="20px">
+        <span><a href="#">Ana Sayfa</a></span>
+      </div>
+      <div class="main-sag">
+        <img src="newspaper-regular.svg" alt="" width="20px" height="20px">
+        <span><a href="#">Olan Biten</a></span> &nbsp; &nbsp; &nbsp;
+        <img src="book-solid.svg" alt="" width="20px" height="20px">
+        <span><a href="#">Tarif Defterim</a></span>
+        <img src="bell-solid.svg" alt="" width="20px" height="20px">
+      </div>
+    </div>
+  </div>
+  <div class="simple-bar2">
+    <div class="logo">
+      <img src="logo.PNG" alt="" width="120px" height="60px">
+    </div>
+    <label for="">
+      <input type="text" name="" id="" placeholder="Yemek tarifi veya yazar ara">
+      <div class="arama">
+        <img class="simge" src="magnifying-glass-solid.svg" alt="" width="10px" height="10px">
+      </div>
+    </label>
+    <button>
+      <img src="fire-burner-solid.svg" alt="" width="20px" height="20px">
+      <span>Tarif Gönder</span>
+    </button>
+    <div class="sag">
+      <img src="user-regular.svg" alt="" height="20px" width="20px">
+      <h3>Giriş Yap </h3>
+      <p style="color: grey;">veya üye ol</p>
+    </div>
+  </div>
+   <div class="navbar">
+   <div class="navbar-ic">
+  <div class="bir">
+    <img src="https://i.nefisyemektarifleri.com/2022/01/06/profilo-tab-logo.png" alt="" width="60px" height="50px">
+    <h2>OH BE DEDİRTEN TARİFLER</h2>
+  </div>
+       
+     
+   </div>
+   </div>
+</body>
+
+</html>

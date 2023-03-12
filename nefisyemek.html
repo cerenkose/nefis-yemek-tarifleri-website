@@ -1,0 +1,2201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #F2F5FA;
+    }
+
+    .ust-navbar {
+      height: 35px;
+      line-height: 35px;
+      background-color: #F2F5FA;
+
+    }
+
+    .ust-navbar-ic {
+      margin: 0 auto;
+      width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      ;
+      color: #9b9b9b;
+    }
+
+    .ust-navbar-ic span {
+      margin-right: 20px;
+      font-weight: 600;
+    }
+
+    .alt-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100px;
+      background-color: white;
+    }
+
+    .alt-navbar-ic {
+      margin: 0 auto;
+      width: 1100px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .alt-navbar-ic input {
+      width: 460px;
+      height: 45px;
+      border: 2px solid #e3e9f1;
+      border-right: 0;
+      border-radius: 10px;
+      padding: 2px 60px 0 15px;
+      margin-left: 50px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: #fff;
+    }
+
+    .alt-navbar-ic input::placeholder {
+      padding: 6px;
+      font-size: 18px;
+      opacity: 0.8;
+    }
+
+    .alt-navbar-ic .buton-1 {
+      height: 45px;
+      width: 60px;
+      background-color: #cc2e38;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      margin-left: 0;
+      border-color: #cc2e38;
+      color: white;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .alt-navbar-ic .buton-2 {
+
+      color: white;
+      width: 142px;
+      height: 45px;
+      line-height: 45px;
+      background-color: #f89526;
+      text-align: center;
+      margin-left: 20px;
+      font-weight: normal;
+      border-color: #f89526;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .buton-3 {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 142px;
+      height: 65px;
+      padding: 0;
+      margin-left: 20px;
+    }
+
+    .buton-3 h4,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .buton-3 h4 {
+      color: black;
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .buton-3 p {
+      font-size: 12px;
+      font-weight: 600;
+      color: #a9b2bc;
+      line-height: 1.5;
+    }
+
+    .navbar-3 {
+      background-color: #cc2e38;
+      border-bottom: 5px solid #ffc12d;
+      height: 76px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+    }
+
+    .navbar-3-ic {
+      margin: 0 auto;
+      width: 1100px;
+      display: flex;
+      align-items: center;
+
+
+
+    }
+
+    .icerik-1 {
+      width: 122px;
+      height: 76px;
+      background-color: #05519C;
+      cursor: pointer;
+
+
+    }
+
+    .icerik-1 p {
+      color: white;
+      text-align: center;
+      font-weight: 600;
+      padding-top: 10px;
+    }
+
+    .icerik-2 {
+      width: 122px;
+      height: 76px;
+      text-align: center;
+      color: white;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+    }
+
+    .reklam {
+      width: 970px;
+      height: 250px;
+      border: 1px solid #eee;
+      ;
+      position: relative;
+      top: 10px;
+      left: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      background-color: #eee;
+    }
+
+    .reklam p {
+      text-align: center;
+      color: black;
+
+      font-size: 46px;
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 1000px;
+
+    }
+
+    .main-sol {
+      width: 650px;
+    }
+
+    .kart-1 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .yazilar h3 {
+      font-weight: normal;
+      font-size: 20px;
+      margin-top: 16px;
+    }
+
+    .yazilar p {
+      color: grey;
+    }
+
+    .ilkeriye {
+      height: 510px;
+      width: 100%;
+    }
+
+    .son-reklam {
+      width: 1010px;
+      height: 200px;
+      background-color: #eee;
+      margin-top: 20px;
+      margin-left: 150px;
+      margin-bottom: 20px;
+    }
+
+    .main2 {
+      margin: 0 auto;
+      width: 1000px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main2-sol {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+    }
+
+    .main2-sag {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+
+    }
+
+    .main2-sag .liste {
+      display: flex;
+      justify-content: flex-end;
+
+
+    }
+
+    .main2-sag .liste a {
+      color: grey;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .main2-sag .liste a:hover {
+      text-decoration: underline;
+      color: #373d48;
+
+    }
+
+    .kartlar {
+      margin: 0 auto;
+      width: 1100px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 300px;
+      height: 390px;
+      margin-left: 50px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .orta-buton {
+      width: 1300px;
+      display: flex;
+      margin-top: 50px;
+    }
+
+    .orta-buton button {
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 220px;
+      width: 250px;
+      background-color: #cc2e38;
+      color: #fff;
+      margin: 25px auto 0;
+      padding: 20px;
+      border-radius: 12px;
+      border-color: #cc2e38;
+      display: flex;
+    }
+
+    .main3-arka {
+      background-color: #fff;
+    }
+
+    .main3 {
+      margin: 0 auto;
+      width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: 20px;
+
+    }
+
+    .main3-baslik {
+      font-size: 26px;
+      color: #0e0e0f;
+      line-height: 45px;
+      margin-top: 60px;
+      align-items: center;
+      box-sizing: border-box;
+      width: 100%;
+
+    }
+
+    .main3-baslik img {
+      margin-left: 60px;
+    }
+
+    .main3-baslik span {
+      margin-left: 20px;
+    }
+
+    .main3-sol {
+      display: flex;
+      justify-content: flex-start;
+      width: 500px;
+
+
+    }
+
+    .main3-sag {
+      display: flex;
+      flex-wrap: wrap;
+      width: 600px;
+
+    }
+
+    .main4 {
+      background-color: #F2F5FA;
+      padding: 45px 0;
+    }
+
+    .main4 h4 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: #313d51;
+    }
+
+    .main4 p {
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+      color: #9b9b9b;
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    .itemler {
+      display: flex;
+      justify-content: center;
+    }
+
+    .itemler img {
+      justify-content: center;
+      margin-left: 20px;
+      border: 2px solid rgb(221, 221, 221);
+      border-radius: 4px;
+    }
+
+    .item-yazi {
+      margin-top: 20px;
+    }
+
+    .item-yazi span {
+      margin-top: 20px;
+      text-align: center;
+      margin-left: 120px;
+    }
+
+    .main5-dis {
+      margin-top: 40px;
+      width: 100%;
+      height: auto;
+      background-color: #cc2e38;
+      display: flex;
+    }
+
+    .main5 {
+      width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .main5 .baslik {
+      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+      padding-top: 20px;
+      width: 100%;
+      margin-left: 45px;
+    }
+
+    .main5 .baslik h4 {
+      color: #fff;
+      font-weight: normal;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    .main5 .main5-buton {
+      height: 60px;
+      width: 220px;
+      background-color: white;
+      border-radius: 6px;
+      border-color: #cc2e38;
+      display: flex;
+      margin-left: 400px;
+      margin-top: 60px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 60px;
+
+    }
+
+    .main5 .main5-buton p {
+      color: #cc2e38;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    .main6-dis {
+      margin: 0 auto;
+      width: 1100px;
+      background-color: #F2F5FA;
+      ;
+    }
+
+    .main6-baslik {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 60px;
+    }
+
+    .main6-baslik span {
+      margin-left: 10px;
+      font-size: 26px;
+      color: #373d48;
+      line-height: 45px;
+    }
+
+    .main6-baslik img {
+
+      margin-right: 5px;
+      width: 40px;
+      height: 40px;
+
+    }
+
+    .main6-sag {
+      display: flex;
+
+    }
+
+    .main6-sol {
+      display: flex;
+    }
+
+    .buton-sag {
+      border-color: #cc2e38;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .buton-sol {
+      margin-right: 30px;
+      border-color: #cc2e38;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .main6-ic {
+      display: flex;
+    }
+
+    .main6-ic .resimler {
+      width: 555px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .resimler h4 {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      color: #313d51;
+      padding-right: 0;
+    }
+
+    .main6-buton {
+      background-color: #cc2e38;
+      padding: 15px;
+      border-radius: 6px;
+      border-color: #cc2e38;
+      margin-left: 450px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 220px;
+    }
+
+    .main6-buton p {
+      color: white;
+    }
+
+    .main7-dis {
+      background-color: #fab970;
+
+    }
+
+    .main7 {
+      width: 1100px;
+      margin: 0 auto;
+      display: flex;
+    }
+
+    .main7-sol {
+      width: 700px;
+      color: #fff;
+    }
+
+    .main7-sol .sol-baslik h2 {
+      font-weight: 700;
+      padding: 20px;
+      padding-bottom: 0;
+      padding-top: 25px;
+    }
+
+    .main7-sol .sol-aciklama {
+      padding: 20px;
+    }
+
+    .main7-sol .sol-alt {
+      padding: 20px;
+    }
+
+    .main7-sol .sol-alt span,
+    img {
+      line-height: 38px;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      line-height: 24px;
+      text-align: center;
+
+    }
+
+    .main7-sol .sol-alt span {
+      margin-right: 10px;
+    }
+
+    .ara-dis {
+
+      background-color: #cc2e38;
+    }
+
+    .ara {
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+      margin: 0 auto;
+      width: 1050px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .ara-sol {
+      width: 450px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 50px;
+      color: rgb(255, 255, 255);
+    }
+
+    .ara-sag {
+      display: flex;
+    }
+
+    .ara-sag .ara-buton {
+      display: flex;
+      background-color: #cc2e38;
+      border-color: rgb(255, 255, 255);
+      border-radius: 4px;
+      color: #fff;
+      padding: 10px;
+      margin: 20px;
+      width: 160px;
+      text-align: center;
+    }
+
+    .ara-sag .ara-buton p {
+      padding: 2px;
+    }
+
+    .main8-dis {
+      background-color: #cc2e38;
+    }
+
+    .main8 {
+      margin: 0 auto;
+      width: 1050px;
+    }
+
+    .baslik8 {
+      display: flex;
+      text-align: center;
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
+
+    .baslik8 span {
+      text-align: center;
+      font-size: 26px;
+      margin-left: 12px;
+      color: white;
+    }
+
+    .kisiler {
+      display: flex;
+      justify-content: center;
+
+    }
+
+    .kisi {
+      width: 200px;
+      height: 200px;
+      background-color: white;
+      margin-left: 20px;
+      border-radius: 6px;
+      border: 1px solid #F2F5FA;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+
+    }
+
+    .kisi img {
+      background-color: white;
+      text-align: center;
+      border-radius: 50%;
+      display: block;
+      margin-left: 30px;
+    }
+
+    .kisi-yazi {
+      color: #0e0e0f;
+    }
+
+    .kisi-yazi p {
+      width: 100%;
+    }
+
+    .kisi-yazi:first-child {
+      font-weight: bolder;
+      ???????????
+    }
+
+    .main9-dis {
+      background-color: #F2F5FA;
+    }
+
+    .main9 {
+      margin: 0 auto;
+      width: 1050px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .baslik9 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 60px;
+    }
+
+    .baslik9 h2 {
+      margin-left: 12px;
+      font-size: 26px;
+      color: #373d48;
+      line-height: 45px;
+    }
+
+    .sag9 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #4a4a4a;
+      float: right;
+      padding-right: 27px;
+      line-height: 46px;
+      margin-top: 60px;
+    }
+
+    .image-dis {
+      background-color: #F2F5FA;
+    }
+
+    .image {
+      margin: 0 auto;
+      width: 1050px;
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .image-sol {
+      width: 300px;
+      margin-left: 40px;
+    }
+
+    .image-orta {
+      width: 500px;
+      margin-left: 40px;
+    }
+
+    .image-sag {
+      width: 300px;
+      margin-left: 40px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 6px;
+      padding: 0;
+      margin: 0;
+      margin-top: 12px;
+    }
+
+    .image-alt {
+      margin: 0 auto;
+      background-color: #fff;
+      width: 1050px;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .image-alt-sol {
+      width: 500px;
+      display: block;
+      height: auto;
+    }
+
+    .image-alt-sag {
+      width: 500px;
+      display: block;
+    }
+
+    .image-alt-sag span {
+      color: #504e4e;
+      font-size: 22px;
+      margin-left: 6px;
+      font-weight: bold;
+    }
+
+    .birinci {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .birinci img {
+      margin-top: 34px;
+      border-radius: 4px;
+
+    }
+
+    .main-sag {
+      background-color: white;
+      margin-top: 18px;
+    }
+
+    .birinci span:hover {
+      text-decoration: underline;
+    }
+
+    .image-alt-sol span {
+      margin-left: 40px;
+      color: #313d51;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .image-alt-sol p {
+      font-size: 13px;
+      color: #a9b2bc;
+      margin-bottom: 15px;
+      line-height: inherit;
+      margin-left: 40px;
+      margin-top: 18px;
+    }
+
+    .image-alt-sol h6 {
+      display: block;
+      width: 110px;
+      border-bottom: 2px solid #cc2e38;
+      padding: 5px 15px;
+      color: #cc2e38;
+      font-size: 13px;
+      font-weight: 700;
+      margin-left: 40px;
+      cursor: pointer;
+    }
+
+    .image-alt-sol h6:hover {
+      text-decoration: underline;
+    }
+
+    .kirmizi {
+      margin: 0 auto;
+      width: 1100px;
+      border-radius: 2px;
+      background-color: #c8232c;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 80px;
+    }
+
+    .kirmizi-sol {
+      color: white;
+      font-weight: bold;
+    }
+
+    .kirmizi2-dis {
+      background-color: #cc2e38;
+      padding: 40px 0;
+    }
+
+    .kirmizi2 {
+      width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .kirmizi-2-sol {
+      color: white;
+    }
+
+    .kirmizi-2-sag {
+      display: flex;
+      align-items: center;
+    }
+
+    .kirmizi-2-sag button {
+      padding: 10px;
+      color: #cc2e38;
+      border-color: white;
+      border-radius: 4px;
+      width: 180px;
+    }
+
+    .footer-dis {
+      background-color: #e3e9f1;
+    }
+
+    .footer {
+      margin: 0 auto;
+      width: 1100px;
+      display: flex;
+      box-sizing: border-box;
+      height: 200px;
+    }
+
+    .sutunlar {
+      display: flex;
+      box-sizing: border-box;
+      height: auto;
+    }
+
+    .sutun {
+      display: block;
+      box-sizing: border-box;
+      margin: 30px;
+    }
+
+    .sutun p {
+      padding: 6px 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4a4a4a;
+      cursor: pointer;
+    }
+
+    .sutun p:hover {
+      text-decoration: underline;
+    }
+
+    .footer-alt {
+      display: flex;
+      margin: 0 auto;
+      width: 1100px;
+      justify-content: space-between;
+    }
+
+    .footer-yazilar span:hover {
+      text-decoration: underline;
+    }
+
+    .footer-yazilar span {
+      font-weight: 600;
+      color: #c8232c;
+      margin-left: 22px;
+      cursor: pointer;
+    }
+
+    .footer-alt img {
+      margin-left: 12px;
+    }
+
+    .footer2-dis {
+      background-color: #f89526;
+      padding: 15px;
+    }
+
+    .footer2 {
+      margin: 0 auto;
+      width: 1100px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer2 span {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .footer2-buton {
+      display: flex;
+      background-color: #f89526;
+      border-color: white;
+      border-radius: 6px;
+      padding: 16px;
+    }
+
+    .footer2-sol {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ust-navbar">
+    <div class="ust-navbar-ic">
+      <div class="navbar-sol">
+        <span>Ana Sayfa</span>
+      </div>
+      <div class="navbar-sag">
+        <span>Olan Biten</span>
+        <span>Tarif Defterim</span>
+      </div>
+    </div>
+  </div>
+  <div class="alt-navbar">
+    <div class="alt-navbar-ic">
+      <div class="logo">
+        <img
+          src="https://scontent.fadb2-2.fna.fbcdn.net/v/t39.30808-6/278194685_10159399706708101_8667134524873435675_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=6r3Si22bhD4AX_pWRb7&_nc_ht=scontent.fadb2-2.fna&oh=00_AfATBrd4kPgC6S6yKV5VB7jrlrdtxPyvIrzcR14PpoTMsw&oe=63D4E0BC"
+          alt=" " width="100px" height="100px">
+      </div>
+      <input type="text" placeholder="Yemek tarifi veya yazar ara">
+      <button class="buton-1">Ara</button>
+      <button class="buton-2"> Tarif Gönder </button>
+      <button class="buton-3">
+        <h4>Giriş Yap</h4>
+        <p>veya üye ol</p>
+      </button>
+    </div>
+  </div>
+  <div class="navbar-3">
+    <div class="navbar-3-ic">
+      <div class="icerik-1">
+        <p style="  letter-spacing: 5px; "> PROFİLO</p>
+        <p style="font-size: 12px; color: white; padding: 0; margin: 6px;">OH BE DEDİRTEN TARİFLER</p>
+      </div>
+      <div class="icerik-2">
+        <p>TARİFLER</p>
+      </div>
+      <div class="icerik-2">
+        <p>VİDEOLAR</p>
+      </div>
+      <div class="icerik-2">
+        <p>MENÜLER</p>
+      </div>
+      <div class="icerik-2">
+        <p>TREND</p>
+      </div>
+      <div class="icerik-2">
+        <p>NE PİŞİRSEM?</p>
+      </div>
+      <div class="icerik-2">
+        <P>BLOG</P>
+      </div>
+      <div class="icerik-2">
+        <p>LİSTELER</p>
+      </div>
+      <div class="icerik-2">
+        <p>KAÇ KALORİ?</p>
+      </div>
+    </div>
+  </div>
+  <div style="    background-color: #eee;" class="reklam">
+    <p>REKLAM</p>
+  </div>
+
+  <div class="main">
+    <div class="main-sol">
+      <img class="ilkeriye" style="margin-top: 30px;"
+        src="https://play-lh.googleusercontent.com/4ykIaUo1qaH1KfW2nt4kHyOmm2zDQiCg8zrQx9MudF7WPtt64nfmL8g4MS-KEMcyf_Q"
+        alt="">
+      <div style="height: 150px;
+   width: 650px;     background-color: #eee;" class="bosalan"></div>
+    </div>
+    <div class="main-sag">
+      <div class="kart-1">
+        <div class="resiim">
+          <img style="margin-right: 20px; margin-top: 20px; border-radius: 4px; "
+            src="https://i.nefisyemektarifleri.com/2023/01/24/muzlu-muhallebi-1.jpg" alt="" width="150px"
+            height="100px">
+        </div>
+        <div class="yazilar">
+          <h3>Muzlu Muhallebi</h3>
+          <p>Beyza Şekerci</p>
+          <p>918 deftere eklenme</p>
+        </div>
+
+      </div>
+      <div class="kart-1">
+        <div class="resiim">
+          <img style="margin-right: 20px; margin-top: 10px; border-radius: 4px;"
+            src="https://i.nefisyemektarifleri.com/2023/01/23/ispanakli-pasta-27.jpg" alt="" width="150px"
+            height="100px">
+        </div>
+        <div class="yazilar">
+          <h3>Ispanaklı Pasta</h3>
+          <p>Selin Koz</p>
+          <p>918 deftere eklenme</p>
+        </div>
+
+      </div>
+      <div class="kart-1">
+        <div class="resiim">
+          <img style="margin-right: 20px; margin-top: 10px; border-radius: 4px;"
+            src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg" alt="" width="150px"
+            height="100px">
+        </div>
+        <div class="yazilar">
+          <h3>Karnabahar Tarifi</h3>
+          <p>Didem Candan</p>
+          <p>918 deftere eklenme</p>
+        </div>
+
+      </div>
+      <div class="kart-1">
+        <div class="resiim">
+          <img style="margin-right: 20px; margin-top: 10px; border-radius: 4px;"
+            src="https://i.nefisyemektarifleri.com/2023/01/20/portakal-kabugu-sekerlemesi.jpg" alt="" width="150px"
+            height="100px">
+        </div>
+        <div class="yazilar">
+          <h3>Islak Kek</h3>
+          <p>Aslıhan Gül</p>
+          <p>918 deftere eklenme</p>
+        </div>
+
+      </div>
+      <div class="kart-1">
+        <div class="resiim">
+          <img style="margin-right: 20px; margin-top: 10px; border-radius: 4px;"
+            src="https://i.nefisyemektarifleri.com/2023/01/20/sutlu-mantar.jpg" alt="" width="150px" height="100px">
+        </div>
+        <div class="yazilar">
+          <h3>Sütlü Mantar</h3>
+          <p>Hayriye Şeker</p>
+          <p>918 deftere eklenme</p>
+        </div>
+
+      </div>
+      <div class="kart-1">
+        <div class="resiim">
+          <img style="margin-right: 20px; margin-top: 10px; border-radius: 4px;"
+            src="https://i.nefisyemektarifleri.com/2023/01/19/limonlu-su-muhallebisi.jpg" alt="" width="150px"
+            height="100px">
+        </div>
+        <div class="yazilar">
+          <h3>Triliçe</h3>
+          <p>Betül Coşgun</p>
+          <p>918 deftere eklenme</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div style=" background-color: #eee;" class="son-reklam">
+    <div class="bosluk"></div>
+  </div>
+  <div class="main2">
+    <div class="main2-sol">
+      <img style="    float: left;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;"
+        src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/en-cok-tarif-defterine-eklenenler.svg"
+        height="40px" alt="Trend" data-lazy-loaded="true">
+      <h3 style="    font-size: 26px;
+   color: #373d48;
+   line-height: 45px; font-weight: normal;">Trend Yemek Tarifleri</h3>
+    </div>
+    <div class="main2-sag">
+      <div class="liste">
+        <a href="#">BUGÜN</a>
+        <a href="#">BU HAFTA</a>
+        <a href="#">BU AY</a>
+        <a href="#">BU YIL</a>
+        <a href="#">TÜM ZAMANLAR</a>
+      </div>
+    </div>
+  </div>
+  <div class="kartlar">
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/ispanakli-pasta-27.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ispanaklı Pasta</h5>
+        <p style="color: grey;" class="card-text">4-6 kişilik</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2023/01/20/kat-kat-yumusacik-hashasli-lokum-tarifi-videolu.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Haşhaşlı Poğaça</h5>
+        <p style="color: grey;" class="card-text">8-10 kişilik, 20dk Hazırlık, 30dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">MELEK İLE LEZZETELER
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          15</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/19/ipek-gibi-tavuk-gogsu-tatlisi.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">İpek Gibi Tavuk Göğsü Tatlısı</h5>
+        <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Esin Akan Tarifleri
+          3bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          7</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/19/limonlu-su-muhallebisi.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Limonlu Su Muhallebisi</h5>
+        <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Elif Atalar
+          2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          15</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/22/havuc-toplari-pratik-ve-lezzetli.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Havuç Topları</h5>
+        <p style="color: grey;" class="card-text">6-8 kişilik, 15dk Hazırlık, Pişirme yok</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Zeliha Turhan
+          2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          26</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2023/01/19/3-kasik-tatlisi-trileceye-rakipcok-pratik.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">3 Kaşık Tatlısı</h5>
+        <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 25dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@cook.with.me.e
+          2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          12</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2023/01/20/pastane-pogacasi-tadinda-dereotlu-pogaca-1.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Pastane Poğaçası Tadında Dereotlu Poğaça</h5>
+        <p style="color: grey;" class="card-text">12-14 kişilik, 20dk Hazırlık, 30dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Selime Gör
+          1992 <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          4</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/26/unlu-sirkeli-borek.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Sirkeli Börek</h5>
+        <p style="color: grey;" class="card-text">8-10 kişilik, 20dk Hazırlık, 30dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Hanımeli Mutfağı
+          1800 <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          9</small>
+
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Airfryer Karnabahar Tarifi</h5>
+        <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16 </small>
+      </div>
+    </div>
+  </div>
+  <div class="orta-buton">
+    <button>
+      <p>Tüm Trend Tarifler </p> <img style="margin-left: 10px; color: white;" src="arrow-right-solid.svg" alt=""
+        width="10px" height="10px">
+    </button>
+  </div>
+  <div class="main3-arka">
+    <div class="main3">
+      <div class="main3-baslik">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/video-player.svg" height="45px"
+          alt="Videolu Tarifler" data-lazy-loaded="true">
+        <span>Videolu Yemek Tarifleri</span>
+      </div>
+      <div class="main3-sol">
+        <div class="card" style="width: 30rem;">
+          <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/26/unlu-sirkeli-borek.jpg"
+            alt="Card image cap">
+          <div class="card-body " style="width: 30rem; height: 200px;">
+            <p style="color: #373d48;" class="card-text"><img class="hide-mobile"
+                src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/play-btn-50-px.svg" alt="Oynat"
+                data-lazy-loaded="true">
+              Unlu Sirkeli Börek <br>
+              Elif Atalar
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="main3-sag">
+
+        <div class="card" style="width: 15rem; height: 250px; ">
+          <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/25/airfryer-palamut-tarifi.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text" style="padding: 20px;"><img
+                src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/play-sm.svg" alt="Oynat"
+                data-lazy-loaded="true">
+              Palamut Tarifi
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 15rem; height: 250px;">
+          <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/24/muzlu-muhallebi-1.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text" style="padding: 20px;"><img
+                src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/play-sm.svg" alt="Oynat"
+                data-lazy-loaded="true">
+              Muzlu Muhallebi
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 14rem; height: 250px;">
+          <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/ispanakli-pasta-27.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text" style="padding: 20px;"><img
+                src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/play-sm.svg" alt="Oynat"
+                data-lazy-loaded="true">
+              Ispanaklı Pasta
+            </p>
+          </div>
+        </div>
+        <div class="card" style="width: 14rem; height: 250px;">
+          <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-text" style="padding: 20px;"><img
+                src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/play-sm.svg" alt="Oynat"
+                data-lazy-loaded="true">
+              Karnabahar Tarifi
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="orta-buton" style="margin-bottom: 20px;">
+        <button>
+          <p>Daha Fazla Video </p> <img style="margin-left: 10px; color: white;" src="arrow-right-solid.svg" alt=""
+            width="10px" height="10px">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  <div class="main4">
+    <h4>Evdeki malzemelerinizi seçin, Size tarif önerelim</h4>
+    <p>Evinizdeki malzemeler ile hangi yemekleri yapabileceğinizi görmek için mevcut olan malzemeleri seçin ve tarifleri
+      listeleyin!</p>
+    <div class="itemler">
+      <img src="https://i.nefisyemektarifleri.com/2022/12/27/pirasa.jpg" alt="pırasa" data-lazy-loaded="true"
+        height="100px" width="100px">
+
+      <img src="https://i.nefisyemektarifleri.com/2022/12/26/karnabahar.jpg" alt="karnabahar" data-lazy-loaded="true"
+        height="100px" width="100px">
+      <img src="https://i.nefisyemektarifleri.com/2022/11/09/lahana.jpg" alt="beyaz lahana" data-lazy-loaded="true"
+        height="100px" width="100px">
+      <img src="https://i.nefisyemektarifleri.com/2022/12/16/ispanak.jpg" alt="ıspanak" data-lazy-loaded="true"
+        height="100px" width="100px">
+      <img src="https://i.nefisyemektarifleri.com/2022/11/09/kereviz.jpg" alt="kereviz" data-lazy-loaded="true"
+        height="100px" width="100px">
+      <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/jpg/malzeme1.jpg" alt="Domates"
+        data-lazy-loaded="true" height="100px" width="100px">
+      <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/png/add-element.png" alt="Malzeme Ekle"
+        data-lazy-loaded="true" height="100px" width="100px">
+    </div>
+    <div class="item-yazi">
+      <span>Pırasa</span>
+      <span>Karnabahar</span>
+      <span>Lahana</span>
+      <span>Ispanak</span>
+      <span>Kereviz</span>
+      <span>Domates</span>
+    </div>
+
+  </div>
+  <div class="orta-buton" style="margin-bottom: 20px;">
+    <button>
+      <p>Tarifi Göster</p> <img style="margin-left: 10px; color: white; " src="arrow-right-solid.svg" alt=""
+        width="10px" height="10px">
+    </button>
+  </div>
+  <div style="    background-color: #eee; " class="reklam">
+
+  </div>
+  <div class="main5-dis">
+    <div class="main5">
+      <div class="baslik">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/icon.svg" height="40px"
+          alt="Yeni Tarifler" data-lazy-loaded="true">
+        <h4>Yeni Yemek Tarifleri</h4>
+      </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="https://i.nefisyemektarifleri.com/2023/01/20/kat-kat-yumusacik-hashasli-lokum-tarifi-videolu.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Haşhaşlı Poğaça</h5>
+          <p style="color: grey;" class="card-text">8-10 kişilik, 20dk Hazırlık, 30dk Pişirme</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">MELEK İLE LEZZETELER
+            6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            15</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/19/ipek-gibi-tavuk-gogsu-tatlisi.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">İpek Gibi Tavuk Göğsü Tatlısı</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Esin Akan Tarifleri
+            3bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            7</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/19/limonlu-su-muhallebisi.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Limonlu Su Muhallebisi</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Elif Atalar
+            2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            15</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="https://i.nefisyemektarifleri.com/2023/01/22/havuc-toplari-pratik-ve-lezzetli.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Havuç Topları</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 15dk Hazırlık, Pişirme yok</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Zeliha Turhan
+            2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            26</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="https://i.nefisyemektarifleri.com/2023/01/19/3-kasik-tatlisi-trileceye-rakipcok-pratik.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">3 Kaşık Tatlısı</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 25dk Pişirme</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">@cook.with.me.e
+            2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            12</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top"
+          src="https://i.nefisyemektarifleri.com/2023/01/20/pastane-pogacasi-tadinda-dereotlu-pogaca-1.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Pastane Poğaçası Tadında Dereotlu Poğaça</h5>
+          <p style="color: grey;" class="card-text">12-14 kişilik, 20dk Hazırlık, 30dk Pişirme</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Selime Gör
+            1992 <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            4</small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/26/unlu-sirkeli-borek.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Sirkeli Börek</h5>
+          <p style="color: grey;" class="card-text">8-10 kişilik, 20dk Hazırlık, 30dk Pişirme</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Hanımeli Mutfağı
+            1800 <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            9</small>
+
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Airfryer Karnabahar Tarifi</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Yasemin Atalar
+            6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            16 </small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Airfryer Karnabahar Tarifi</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Yasemin Atalar
+            6bin <img src="newspaper-regular.svg" alt="" width="20px" height="20px">
+            16 </small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Airfryer Karnabahar Tarifi</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Yasemin Atalar
+            6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            16 </small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Airfryer Karnabahar Tarifi</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Yasemin Atalar
+            6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            16 </small>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/airfryer-karnabahar-tarifi-1.jpg"
+          alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Airfryer Karnabahar Tarifi</h5>
+          <p style="color: grey;" class="card-text">6-8 kişilik, 5dk Hazırlık, 15dk Pişirme</p>
+
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Yasemin Atalar
+            6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+            16 </small>
+        </div>
+      </div>
+      <button class="main5-buton">
+        <p>Tüm Yeni Tarifler</p>
+      </button>
+    </div>
+
+  </div>
+  <div class="main6-dis">
+    <div class="main6">
+      <div class="main6-baslik">
+        <div class="main6-sol"> <img
+            src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/icon(1).svg" alt="Listeler"
+            data-lazy-loaded="true">
+          <span>Yemek Listeleri</span>
+        </div>
+        <div class="main6-sag">
+          <button class="buton-sol"> <img src="arrow-left-solid.svg" alt=""></button>
+          <button class="buton-sag">
+            <img src="arrow-right-solid.svg" alt=""></button>
+
+        </div>
+
+      </div>
+      <div class="main6-ic">
+        <div class="resimler">
+          <img src="https://i.nefisyemektarifleri.com/2023/01/19/sevgililer-gunu-kahvaltisi-22-farkli-oneri-320x213.jpg"
+            alt="">
+          <h4>Sevgililer Günü Kahvaltısı: En İyi 30 <br> Değişik Tarif </h4>
+
+        </div>
+        <div class="resimler">
+          <img
+            src="https://i.nefisyemektarifleri.com/2023/01/18/sevgililer-gunu-menusu-40-romantik-aksam-yemegi-1-320x213.jpg"
+            alt="">
+          <h4>Sevgililer Günü Menüsü: 40 Romantik <br> Akşam Yemeği
+          </h4>
+        </div>
+        <div class="resimler">
+          <img
+            src="https://i.nefisyemektarifleri.com/2023/01/18/sevgililer-gunu-pastalari-30-romantik-tarif-2-320x213.jpg"
+            alt="">
+          <h4>Sevgililer Günü Pastaları: Aşk Dolu <br> 30 Tarif
+          </h4>
+        </div>
+
+      </div>
+      <button class="main6-buton">
+        <p>Tüm Listeleri Gör</p>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="main7-dis">
+    <div class="main7">
+      <div class="main7-sol">
+        <div class="sol-baslik">
+          <h2>Nefis Yemek Tarifleri Cebinizde!</h2>
+        </div>
+        <div class="sol-aciklama">
+          <p>500 BİN'den fazla tarif ile Türkiye'nin en çok kullanılan tarif uygulamasını siz de indirin. Her gün
+            eklenen yüzlerce tarife en hızlı şekilde uygulamamızdan ulaşabilirisiniz. 1 MİLYON'dan fazla kişi bu
+            uygulamayı kullanarak yemeklerini, tatlılıarını yapıyor. Siz de mutlaka indirin, nefis tariflerimizi
+            kaçırmayın!</p>
+        </div>
+        <div class="sol-alt">
+          <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/icon(4).svg"
+            alt="Tamamen Ücretsiz" data-lazy-loaded="true">
+          <span>Tamamen Ücretsiz</span>
+          <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/icon(3).svg" alt="Tarif Gönder"
+            data-lazy-loaded="true">
+          <span>Tarifini Gönder</span>
+          <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/hourglass.svg"
+            alt="Hemen Yayınlansın" data-lazy-loaded="true">
+          <span>Hemen Yayınlansın</span>
+        </div>
+      </div>
+      <div class="main7-sag">
+        <img style="height:300px;" src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/png/phones.png"
+          alt="Telefon" data-lazy-loaded="true">
+      </div>
+    </div>
+  </div>
+  <div class="ara-dis">
+    <div class="ara">
+      <div class="ara-sol">
+        <p>Mobil Uygulamamızı <u> Ücretsiz</u> İndirebilirsiniz</p>
+      </div>
+      <div class="ara-sag">
+        <button class="ara-buton">
+          <div class="arabutonsol">
+            <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/apple.svg" alt="App Store"
+              data-lazy-loaded="true">
+
+          </div>
+          <div class="arabutonsag">
+            <p style="font-size: 10px;">Hemen İndir</p>
+            <p style="font-weight: 600; font-size: 20px;">App Store</p>
+          </div>
+        </button>
+        <button class="ara-buton">
+          <div class="arabutonsol">
+            <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/g-play.svg" alt="Google Play"
+              data-lazy-loaded="true">
+
+          </div>
+          <div class="arabutonsag">
+            <p style="font-size: 10px;">Hemen İndir</p>
+            <p style="font-weight: 600; font-size: 20px;">Google Play</p>
+          </div>
+        </button>
+        <button class="ara-buton">
+          <div class="arabutonsol">
+            <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/huawei-appgallery-red.svg"
+              alt="Huawei AppGallery" data-lazy-loaded="true">
+          </div>
+          <div class="arabutonsag">
+            <p style="font-size: 10px;">Hemen İndir</p>
+            <p style="font-weight: 600; font-size: 20px;">AppGallery</p>
+          </div>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  <div style="margin-top: 40px;" class="main2">
+    <div class="main2-sol">
+      <img style="    float: left;
+      margin-right: 5px;
+      width: 40px;
+      height: 40px;"
+        src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/en-cok-tarif-defterine-eklenenler.svg"
+        height="40px" alt="Trend" data-lazy-loaded="true">
+      <h3 style="    font-size: 26px;
+     color: #373d48;
+     line-height: 45px; font-weight: normal;">Trend Yemek Tarifleri</h3>
+    </div>
+    <div class="main2-sag">
+      <div class="liste">
+        <a href="#">BUGÜN</a>
+        <a href="#">BU HAFTA</a>
+        <a href="#">BU AY</a>
+        <a href="#">TÜM ZAMANLAR</a>
+      </div>
+    </div>
+  </div>
+  <div class="kartlar">
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2019/10/04/evde-pizza-tarifi-nasil-yapilir-12-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Evde Pizza Tarifi Nasıl Yapılır?
+        </h5>
+        <p style="color: grey;" class="card-text"> 8-10 kişilik, 40dk Hazırlık, 30dk Pişirme</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2020/05/19/kandil-simiti-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Kandil Simiti (Kıyır Kıyır Tam Ölçü) (videolu)
+        </h5>
+        <p style="color: grey;" class="card-text"> 8-10 kişilik, 15dk Hazırlık, 20dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">MELEK İLE LEZZETELER
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          15</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2020/03/16/yumusacik-pogaca-tarifi-5-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Tepsileri Dolduran Pamuk Gibi Poğaça Tarifi (Videolu)
+        </h5>
+        <p style="color: grey;" class="card-text"> 6-8 kişilik, 10dk Hazırlık, 20dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Esin Akan Tarifleri
+          3bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          7</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2022/09/28/fincan-tatlisi-nasil-yapilir-3-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Fincan Tatlısı Nasıl Yapılır?
+        </h5>
+        <p style="color: grey;" class="card-text"> 4-6 kişilik</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Elif Atalar
+          2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          15</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2021/01/07/profiterol-tarifi-videolu-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Profiterol Tarifi (videolu)
+        </h5>
+        <p style="color: grey;" class="card-text"> 8-10 kişilik, 20dk Hazırlık, 45dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Zeliha Turhan
+          2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          26</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2019/11/15/mayasiz-dereotlu-pogaca-tarifi-videolu-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Dereotlu Poğaça
+        </h5>
+        <p style="color: grey;" class="card-text"> 8-10 kişilik, 20dk Hazırlık, 20dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">@cook.with.me.e
+          2bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          12</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2014/10/cheesecake-video-320x180.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Frambuazlı Cheesecake Nasıl Yapılır?
+        </h5>
+        <p style="color: grey;" class="card-text"> 4-6 kişilik, 30dk Hazırlık, 1 saat Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Selime Gör
+          1992 <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          4</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2020/05/03/browni-kurabiye-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Browni Kurabiye
+        </h5>
+        <p style="color: grey;" class="card-text"> 8-10 kişilik, 20dk Hazırlık, 10dk Pişirme</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Hanımeli Mutfağı
+          1800 <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          9</small>
+
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2016/10/15/pastane-usulu-un-kurabiyesi-videosu-320x180.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Pastane Usulü Un Kurabiyesi Videosu
+        </h5>
+        <p style="color: grey;" class="card-text"> 10-12 kişilik, 10dk Hazırlık, 20dk Pişirme</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16 </small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="https://i.nefisyemektarifleri.com/2023/01/23/ispanakli-pasta-27-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Ispanaklı Pasta
+
+        </h5>
+        <p style="color: grey;" class="card-text"> 4-6 kişilik</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16 </small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2017/11/01/pandispanya-nasil-yapilir-yumusacik-bir-kek-320x213.jpg"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Pandispanya nasıl yapılır? Yumuşacık bir kek
+
+        </h5>
+        <p style="color: grey;" class="card-text"> 8-10 kişilik, 30dk Hazırlık, 35dk Pişirme</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16 </small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top"
+        src="https://i.nefisyemektarifleri.com/2023/01/22/findikli-buzluk-kurabiyesi-320x213.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Fındıklı Buzluk Kurabiyesi
+
+        </h5>
+        <p style="color: grey;" class="card-text">12-14 kişilik, 25dk Hazırlık, 30dk Pişirme</p>
+
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Yasemin Atalar
+          6bin <img src="newspaper-regular.svg" alt="" width="20px" height="30px">
+          16 </small>
+      </div>
+    </div>
+  </div>
+  <button class="main6-buton">
+    <p>Daha Fazla Tarif</p>
+  </button>
+  <div style="margin-bottom: 40px;     background-color: #eee;" class="reklam">
+
+  </div>
+  <div class="main8-dis">
+    <div class="main8">
+      <div class="baslik8">
+        <img style="width: 50px; height: 50px;" src="helmet-safety-solid.svg" alt="">
+        <span>Yazarlar</span>
+      </div>
+      <div class="kisiler">
+        <div class="kisi">
+          <img
+            src="https://i2.nefisyemektarifleri.com/avatar/2019/04/19/3514/xa1555678923-751d43b96920b44a27ba4b25ad85fe3b-bpthumb.jpg"
+            alt="">
+          <div class="kisi-yazi">
+            <p>Bizim Mutfak</p>
+            <p>122.175 Takipçi</p>
+            <button>
+              <p style="color: #cc2e38;"> + Takip Et</p>
+            </button>
+          </div>
+
+        </div>
+        <div class="kisi">
+          <img
+            src="https://i2.nefisyemektarifleri.com/avatar/2018/10/02/3035/xa1538513654-889f097f064366a3d8010cfc0b7b1aa4-bpthumb.jpg"
+            alt="">
+          <div class="kisi-yazi">
+            <p>Firuze Akkoç</p>
+            <p>122.175 Takipçi</p>
+            <button>
+              <p style="color: #cc2e38;"> + Takip Et</p>
+            </button>
+          </div>
+
+        </div>
+        <div class="kisi">
+          <img
+            src="https://i2.nefisyemektarifleri.com/avatar/2017/05/18/932388/xa1495091493-de7f585c5bf66137aa943d9d5c2f3772-bpthumb.jpg"
+            alt="">
+          <div class="kisi-yazi">
+            <p>Ayşe Selim</p>
+            <p>122.175 Takipçi</p>
+            <button>
+              <p style="color: #cc2e38;"> + Takip Et</p>
+            </button>
+          </div>
+
+        </div>
+        <div class="kisi">
+          <img
+            src="https://i2.nefisyemektarifleri.com/avatar/2018/09/02/30373/xa1535929356-d62495f02de307d5a1483e7a90aacbf0-bpthumb.jpg"
+            alt="">
+          <div class="kisi-yazi">
+            <p>Serenay Akkaya</p>
+            <p>122.175 Takipçi</p>
+            <button>
+              <p style="color: #cc2e38;"> + Takip Et</p>
+            </button>
+          </div>
+
+        </div>
+        <div class="kisi">
+          <img
+            src="https://i2.nefisyemektarifleri.com/avatar/2018/09/02/30373/xa1535929356-d62495f02de307d5a1483e7a90aacbf0-bpthumb.jpg"
+            alt="">
+          <div class="kisi-yazi">
+            <p>Mine Yalçın</p>
+            <p>122.175 Takipçi</p>
+            <button>
+              <p style="color: #cc2e38;"> + Takip Et</p>
+            </button>
+          </div>
+
+        </div>
+        <div class="kisi">
+          <img
+            src="https://i2.nefisyemektarifleri.com/avatar/2018/09/02/30373/xa1535929356-d62495f02de307d5a1483e7a90aacbf0-bpthumb.jpg"
+            alt="">
+          <div class="kisi-yazi">
+            <p>Nesli'nin Mutfağı</p>
+            <p>122.175 Takipçi</p>
+            <button>
+              <p style="color: #cc2e38;"> + Takip Et</p>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <button style="border-color: white; margin-left: 610px; margin-bottom: 60px; " class="main6-buton">
+      <p>Daha Fazla Tarif</p>
+    </button>
+  </div>
+  <div class="main9-dis">
+    <div class="main9">
+      <div class="sol9">
+        <div class="baslik9">
+          <img src="cake-candles-solid.svg" alt="" width="40px" height="40px">
+          <h2>İlginizi Çekebilir</h2>
+        </div>
+      </div>
+      <div class="sag9">
+        <p> <u> Daha Fazla İçerik</u></p>
+      </div>
+    </div>
+  </div>
+  <div class="image-dis">
+    <div class="image">
+      <div class="image-sol">
+        <img src="https://i.nefisyemektarifleri.com/2023/01/27/izmirin-en-iyi-20-kahvalti-mekani.jpg" alt="">
+        <img src="https://i.nefisyemektarifleri.com/2023/01/26/yag-bezesini-geciren-6-dogal-cozum-1.jpg" alt="">
+      </div>
+      <div class="image-orta">
+        <img
+          src="https://i.nefisyemektarifleri.com/2023/01/26/burun-tikanikligina-ne-iyi-gelir-etkili-9-dogal-cozum-1.jpg"
+          alt="">
+      </div>
+      <div class="image-sag">
+        <img src="https://i.nefisyemektarifleri.com/2023/01/26/dolamaya-iyi-gelen-evde-6-bitkisel-tedavi-5.jpg" alt="">
+        <img
+          src="https://i.nefisyemektarifleri.com/2023/01/25/bonfile-nasil-pisirilir-en-iyi-puf-noktalari-10-tarif-1.jpg"
+          alt="">
+      </div>
+    </div>
+    <div class="image-alt">
+      <div class="image-alt-sol">
+        <img style="margin-top: 40px; margin-left: 40px; width: 460px; height: 300px;"
+          src="https://i.nefisyemektarifleri.com/2023/01/25/sevgiliye-evde-10-romantik-surpriz-fikri.jpg" alt="">
+        <span>Sevgiliye Evde 10 Romantik Sürpriz Fikri</span>
+        <p>14 Şubat Sevgililer Günü Sürprizleri Her sene yılbaşından sonra bir sonraki özel gün için geri sayım başlar
+          ve sevgililer günü ne zaman, bu sene hangi güne denk geliyor soruları yavaş yavaş gündeme gelir… En özel
+          günlerde, 14 Şubat Sevgililer Günü ve partnerinizin doğum g...</p>
+        <h6>Detaylı Bilgi</h6>
+      </div>
+      <div class="image-alt-sag">
+        <div class="birinci">
+          <img src="https://i.nefisyemektarifleri.com/2023/01/25/sevgiliye-romantik-yemek-masasi-hazirlama.jpg" alt=""
+            width="150px" height="100px">
+          <span>Sevgiliye Romantik Yemek Masası Hazırlama</span>
+        </div>
+
+        <div class="birinci">
+          <img
+            src="https://i.nefisyemektarifleri.com/2023/01/24/sevgililer-gunu-programlari-en-romantik-10-aktivite-1.jpg"
+            alt="" width="150px" height="100px">
+          <span>
+            Sevgililer Günü Programları: En Romantik 6 Aktivite</span>
+        </div>
+        <div class="birinci">
+          <img src="https://i.nefisyemektarifleri.com/2023/01/24/sevgililer-gununde-gidilebilecek-12-sik-restoran.jpg"
+            alt="" width="150px" height="100px">
+          <span>Sevgililer Günü Nedir, Ne Zaman? Hikayesi, Anlamı</span>
+        </div>
+        <div class="birinci">
+          <img src="https://i.nefisyemektarifleri.com/2023/01/24/sevgililer-gunu-nedir-ne-zaman-hikayesi-anlami.jpg"
+            alt="" width="150px" height="100px">
+          <span>Sevgililer Gününde Gidilebilecek 10 Şık Restoran & Mekan</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="kirmizi">
+    <div class="kirmizi-sol">
+      <span>YouTube kanalımıza abone ol, trend tarif videolarını kaçırma.</span>
+    </div>
+    <div class="kirmizi-sag">
+      <img src="youtube.svg" alt="" width="12px" height="12px">
+      <span style="color: white;">Abone ol</span>
+      <span style="border: 1px solid white
+  ; color: black; background-color: white; padding: 4px; border-radius: 4px;">4 milyon</span>
+    </div>
+  </div>
+  <div style="margin:20px 0;     background-color: #eee;" class="reklam">
+  </div>
+  <div class="kirmizi2-dis">
+    <div class="kirmizi2">
+      <div class="kirmizi-2-sol">
+        <h2>Üye Ol</h2>
+        <p>Siz de nefis yemek tariflerinin paylaşıldığı bu ortama katılın</p>
+      </div>
+      <div class="kirmizi-2-sag">
+        <button>Hemen Kayıt Ol</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-dis">
+    <div class="footer">
+      <div class="sutunlar">
+        <div class="sutun">
+          <p>İFTAR MENÜLERİ</p>
+          <p>LİSTELER</p>
+          <p>PASTA TARİFLERİ</p>
+        </div>
+        <div class="sutun">
+          <p>TARİFLER</p>
+          <p>SORU - CEVAP</p>
+          <p>KEK TARİFLERİ</p>
+        </div>
+        <div class="sutun">
+          <p>VİDEOLAR</p>
+          <p>NE PİŞİRSEM?</p>
+          <p>KURABİYE TARİFLERİ</p>
+        </div>
+        <div class="sutun">
+          <p>MENÜLER</p>
+          <p>YAZARLAR</p>
+          <p>TATLI TARİFLERİ</p>
+        </div>
+        <div class="sutun">
+          <p>TREND</p>
+          <p>KAÇ KALORİ?</p>
+          <p>ELMALI KURABİYE</p>
+        </div>
+        <div class="sutun">
+          <p>BLOG</p>
+          <p>OLAN - BİTEN</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-alt">
+      <div class=" footer-yazilar">
+        <span>HAKKINDA</span>
+        <span>İLETİŞİME GEÇİN</span>
+        <span>KULLANIM KOŞULLARI</span>
+      </div>
+      <div class="footer-logolar">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/youtube(1).svg" alt="">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/facebook(1).svg" alt="">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/twitter(1).svg" alt="">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/png/instagram.png" alt="">
+        <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/pinterest.svg" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="footer2-dis">
+    <div class="footer2">
+      <span style="padding: 0; margin: 0;">Nefis Yemek Tarifleri Cebinizde</span>
+      <div class="footer2-sol">
+        <button class="footer2-buton">
+          <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/g-play.svg" alt="Google Play"
+            data-lazy-loaded="true">
+          <p>Hemen İndir</p>
+          <p>Google Play</p>
+        </button>
+        <button class="footer2-buton">
+          <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/g-play.svg" alt="Google Play"
+            data-lazy-loaded="true">
+          <p>Hemen İndir</p>
+          <p>Google Play</p>
+        </button>
+        <button class="footer2-buton">
+          <img src="https://mn.nytcdn.com/wp-content/themes/nytheme/dist/assets/img/svg/g-play.svg" alt="Google Play"
+            data-lazy-loaded="true">
+          <p>Hemen İndir</p>
+          <p>Google Play</p>
+        </button>
+      </div>
+      <div class="footer2-sag">
+        <p>
+          Her hakkı saklıdır. © 2007-2023 Nefis Yemek Tarifler</p>
+      </div>
+    </div>
+  </div>
+ </body>
+</html>  transfor scale
